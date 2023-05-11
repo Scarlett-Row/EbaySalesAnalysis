@@ -162,3 +162,12 @@ SELECT 'Sporting' AS category, SUM(cat_sales) AS cat_sales, SUM(one_time_buyers)
 FROM May22_Apr23_Category_Sales
 WHERE category LIKE '%sport%'
 ORDER BY cat_sales DESC;
+
+
+--Top 20 Sales from past 3 years
+--2023
+SELECT TOP 20
+	listing_title, total_sale, item_sale, net_sale
+FROM [dbo].[ebay 23]
+WHERE item_sale > 25
+ORDER BY item_sale DESC;
